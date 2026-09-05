@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Payment Recovery Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Payment Recovery Assistant</h1>
+            <p>Prioritize overdue invoices and recover revenue faster.</p>
+        </header>
+
+        <section class="card">
+            <h2>Add Invoice</h2>
+            <form id="invoiceForm">
+                <input id="customer" type="text" placeholder="Customer name" required>
+                <input id="amount" type="number" placeholder="Invoice amount" min="1" required>
+                <label>Due date</label>
+                <input id="dueDate" type="date" required>
+                <button type="submit">Add Invoice</button>
+            </form>
+        </section>
+
+        <section class="stats">
+            <div class="stat">
+                <h3 id="total">0</h3>
+                <p>Total Invoices</p>
+            </div>
+            <div class="stat">
+                <h3 id="overdue">0</h3>
+                <p>Overdue</p>
+            </div>
+            <div class="stat">
+                <h3 id="high">0</h3>
+                <p>High Priority</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="heading-row">
+                <h2>Recovery Dashboard</h2>
+                <button id="clearBtn" class="danger">Clear All</button>
+            </div>
+            <div id="invoiceList"></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
